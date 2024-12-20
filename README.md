@@ -1,3 +1,41 @@
+# API CHALLENGE SPEC
+## Check Smart Contract Decimals
+
+```bash
+# First install dependencies
+$ npm install
+
+# Install ether.js (Note that for RPCProviders with ether.js you must specify version 5 when install)
+$ npm install ethers@5.6.1 --save
+
+# Run API
+$ nest start
+```
+if everything went ok you will see a log like this:
+```bash
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [NestFactory] Starting Nest application...
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +35ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [InstanceLoader] AppModule dependencies initialized +0ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [InstanceLoader] PriceModule dependencies initialized +0ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [InstanceLoader] ContractModule dependencies initialized +0ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [InstanceLoader] ConfigModule dependencies initialized +1ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [RoutesResolver] AppController {/}: +17ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [RouterExplorer] Mapped {/, GET} route +7ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [RoutesResolver] PriceController {/price}: +0ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [RouterExplorer] Mapped {/price/matic, GET} route +2ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [RoutesResolver] ContractController {/contract}: +0ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [RouterExplorer] Mapped {/contract/value, GET} route +1ms
+[Nest] 29880  - 12/20/2024, 2:32:00 PM     LOG [NestApplication] Nest application successfully started +2ms
+```
+1. To check Smart contract decimal values open a web navigator and open:
+   http://localhost:3000/contract/value
+
+2. To check Matic token price in USDT open:
+       http://localhost:3000/price/matic
+
+
+
+   
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
